@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p class="demo">Hello World</p>
+    <p class="demo">Hello World</p>
+    <p class="demo">Hello World</p>
+    <script>
+        var str = document.getElementsByClassName('demo');
+        document.getElementsByTagName('p');
+       for ( var i = 0; i < str.length; i++) {
+        str[i].innerHTML = "Hello world";
+        str[i].style.color = "red";
+        str[i].style.background = "blue";
+       } 
+    </script>
+</body>
+</html>

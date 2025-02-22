@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        background-color: blueviolet;
+       }
+    </style>
+</head>
+<body>
+    <button id="btn">click</button>
+    <button id="stopbtn">stop</button>
+    <script>
+        let mybtn = document.querySelector('#btn');
+        let stopbtn = document.getElementById('stopbtn');
+
+        stopbtn.addEventListener('click', function(){
+            clearInterval(interval);
+        })
+        
+        mybtn.addEventListener('click', function(){
+            let count = 0;
+
+            interval = setInterval(function(){
+                count++;
+                let para = document.createElement('p');
+                para.textContent = "Paragraph:" + count;
+                document.body.appendChild(para);
+            }, 1000)
+        })
+
+
+        // mybtn.addEventListener('click',function(){
+        //     setTimeout(timeOut, 5000);
+        // });
+
+        // function timeOut(){
+        //     let para = document.createElement('p');
+        //     para.innerText = "Paragraph greated";
+        //     document.body.appendChild(para);
+        // }
+    </script>
+</body>
+</html>

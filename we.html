@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <input type="number" id="num1" placeholder="1-r too">
+    <select name="" id="operator">
+        <option value="+">Nemeh</option>
+        <option value="-">hasah</option>
+        <option value="*">vrjih</option>
+        <option value="/">Huwaah</option>
+    </select>
+    <input type="number" id="num2" placeholder="2-r too">
+    <input type="button" value="=" onclick="calculate()">
+    <h3 id="result"> Hariu: ?
+    </h3>
+    <script>
+        function calculate() {
+            let number1 = parseInt(document.getElementById('num1').value);
+            let number2 = parseInt(document.getElementById('num2').value);
+            let temdegt = document.getElementById('operator').value;
+            let urDun;
+            if(temdegt=="+"){
+                urDun = number1 + number2;
+            }else if(temdegt== "-"){
+                urDun = number1 - number2;   
+            }else if(temdegt== "*"){
+                urDun = number1 * number2;
+            }else {
+                urDun = number1 / number2;
+            }
+            let hariult = document.getElementById('result');
+            hariult.innerText = "hariult:" + urDun;
+                }
+    </script>
+</body>
+</html>

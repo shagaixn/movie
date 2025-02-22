@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(60, 59, 90);
+        }
+        .container{
+            width: 30%;
+            margin: auto auto;
+        }
+        input[type="text"]{
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            margin: 10px 1px;
+        }
+        #submitbtn{
+            width: 100%;
+            padding: 15px;
+            background-color: cornflowerblue;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        ul li{
+            display: inline-block;
+            width: 80%;
+            padding: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            background-color: aqua;
+            color: black;
+        }
+        .remove{
+            width: 18%;
+            padding: 15px;
+            margin-left:2px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" >
+            <h1>Todo list</h1>
+            <input type="text" id="input">
+            <input type="submit" value="add" id="submitbtn">
+        </form>
+        <div class="list">
+        
+        </div>
+    </div>
+    <script>
+        let inputValue = document.querySelector('#input');
+        let btn = document.querySelector('#submitbtn');
+        let list = document.querySelector('.list');
+
+        let ulist = document.createElement('ul');
+        list.appendChild(ulist);
+        btn.addEventListener('click',function(event){
+            event.preventDefault();
+            let li = document.createElement('li');
+            li.innerText = inputValue.value;
+            ulist.appendChild(li);
+
+            let removebtn = document.createElement('button');
+            removebtn.textContent='Remove';
+            removebtn.className = 'remove';
+            ulist.appendChild(removebtn);
+
+            removebtn.addEventListener('click', function(){
+                li.remove();
+                removebtn.remove();
+            });
+        });
+
+    </script>
+</body>
+</html>

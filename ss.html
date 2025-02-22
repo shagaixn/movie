@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let student ={
+            ner : "shagai",
+            age : 18,
+            major : "CS",
+            gpa: 4.0,
+            adress:{
+                city: "UB",
+                district:"BZD",
+                horoo: "4",
+            },
+            language:{
+                mn:"Mongolia",
+                kr:"Korea",
+                eng:"English"
+            },
+            start: function() {
+                console.log("Mashin aslaa");
+            }
+        }
+        console.log(student.age);
+        console.log(student.adress.city);
+        console.log(student.language.mn);
+        console.log(student["adress"]["district"]);
+        console.log(student.start());
+    </script>
+</body>
+</html>

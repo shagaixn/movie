@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <script>
+        let  mybtn = document.getElementById('btn');
+        function firstFunction(){
+            alert("firstFunction working...");
+        }
+        function secondFunction(){
+            alert("secondFunction working...");
+        }
+        function thirdFunction(){
+            mybtn.style.background = 'green';
+        }
+        //mybtn.onclick = firstFunction;
+        //mybtn.onclick = secondFunction;
+        mybtn.addEventListener('click', firstFunction);
+        mybtn.addEventListener('click', secondFunction);
+        mybtn.addEventListener('mouseover', thirdFunction);
+        mybtn.addEventListener('mouseout',function(){
+            mybtn.style.background = "";
+        });
+    </script>
+</body>
+</html>
